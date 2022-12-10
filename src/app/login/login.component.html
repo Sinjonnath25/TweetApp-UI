@@ -1,0 +1,83 @@
+<div class="container">
+  <router-outlet></router-outlet>
+  <br />
+  <br />
+  <br />
+  <h2>Please Login Here</h2>
+  <br />
+  <br />
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <img
+          src="../../../assets/register.png"
+          class="img-fluid"
+          alt="Responsive image"
+          height="50%"
+          width="50%"
+        />
+      </div>
+      <div class="col-sm">
+        <div style="width: 50vh">
+          <form #f="ngForm" (ngSubmit)="submit(f)">
+            <div class="form-group">
+              <label for="email"><h6>Email</h6></label>
+              <input
+                required
+                ngModel
+                name="email"
+                #email="ngModel"
+                type="email"
+                class="form-control"
+                placeholder="User Name"
+                aria-label="User Name"
+                id="email"
+              />
+            </div>
+            <div class="form-group mt-2">
+              <label for="password"><h6>Password</h6></label>
+              <input
+                required
+                ngModel
+                name="password"
+                #password="ngModel"
+                type="password"
+                class="form-control"
+                placeholder="Password"
+                aria-label="Password"
+                id="password"
+              />
+            </div>
+            <button
+              [disabled]="!f.valid || clicked"
+              class="btn btn-primary col-12 mt-4 border-100"
+            >
+              <span
+                *ngIf="loading"
+                class="spinner-border spinner-border-sm mr-1"
+              ></span>
+              {{ loginButtonText }}
+            </button>
+            <div *ngIf="error" class="alert alert-danger mt-3 mb-0">
+              {{ error }}
+            </div>
+          </form>
+          <br>
+          <p class="text-muted" style="text-align: center;">
+            <a routerLink="/forgetPassword" class="text-muted"
+              >
+              <h6><b>Forget Password?</b></h6></a
+            >
+          </p>
+
+          <p class="text-muted" style="text-align: center;">
+            <a routerLink="/register" class="text-muted"
+              >
+              <h6><b>Not registrered! Please Singn-Up Here</b></h6></a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
