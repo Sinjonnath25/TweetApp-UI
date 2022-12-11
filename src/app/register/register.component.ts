@@ -51,6 +51,7 @@ export class RegisterComponent implements OnInit {
           console.log(res)
           if(res.status==201){
             Swal.fire("Done",res.message, 'success');
+            this.router.navigateByUrl('/login');
           }
           else{
             Swal.fire("Error",res.message, 'error');
