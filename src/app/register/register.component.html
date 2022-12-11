@@ -36,7 +36,7 @@
             <div class="form-group">
               <label for="firstName">First Name</label>
               <input
-                required
+                required minlength="4" maxlength="25"
                 ngModel
                 name="firstName"
                 #firstName="ngModel"
@@ -46,11 +46,12 @@
                 aria-label="First Name"
                 id="firstName"
               />
+              
             </div>
             <div class="form-group">
               <label for="lastName">Last Name</label>
               <input
-                required
+                required minlength="4" maxlength="25"
                 ngModel
                 name="lastName"
                 #lastName="ngModel"
@@ -91,11 +92,11 @@
             <div class="form-group">
               <label for="contactNumber">Contact Number</label>
               <input
-                required
+                required minlength="10" maxlength="10"
                 ngModel
                 name="contactNumber"
                 #contactNumber="ngModel"
-                type="text"
+                type="number"
                 class="form-control"
                 placeholder="Contact Number"
                 aria-label="Contact Number"
@@ -105,7 +106,7 @@
             <div class="form-group mt-2">
               <label for="password">Password</label>
               <input
-                required
+                required minlength="4" maxlength="25"
                 ngModel
                 name="password"
                 #password="ngModel"

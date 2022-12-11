@@ -2,8 +2,6 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 export let baseUrl = {
- // apiUrl: "http://13.233.24.154:8080/api/v1.0/tweets",
- // 13.115.177.107
   apiUrl: "http://13.115.177.107:8080/api/v1.0/tweets",
 }
 export let environment = {
