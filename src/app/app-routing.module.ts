@@ -1,3 +1,4 @@
+import { AllusersComponent } from './allusers/allusers.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ForgotComponent } from './forgot/forgot.component';
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/register', pathMatch: 'full' },
   { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
   { path: 'my-tweet', component: TweetPageComponent, canActivate: [AuthGuard] },
+  { path: 'allUsers', component: AllusersComponent, canActivate: [AuthGuard] },
 ];
 
 @NgModule({
